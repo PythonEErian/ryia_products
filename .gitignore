@@ -1,0 +1,30 @@
+# Search cache files
+search_cache.json
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+
+# Conversion utility (not needed in production)
+convert_csv_to_json.php
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+error.log
+access.log
+
+# Backup files
+*.bak
+*.backup
