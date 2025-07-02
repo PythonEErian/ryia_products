@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Product Search Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+            text-align: right;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .demo-search {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            margin: 20px 0;
+        }
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .result-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border-left: 4px solid #007bff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .product-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .product-details {
+            font-size: 14px;
+            color: #666;
+        }
+        .price {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .score {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            display: inline-block;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .features li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 نظام البحث عن المنتجات العربية</h1>
+        <h2 style="text-align: center; color: #666;">Arabic Product Search System</h2>
+        
+        <div class="demo-search">
+            <h3>📱 واجهة البحث - Search Interface</h3>
+            <input type="text" class="search-input" placeholder="ابحث عن المنتجات... (فستان، قميص، جاكيت)" readonly>
+            <div style="font-size: 12px; color: #888;">* This is a demo interface. The actual search is powered by AJAX and PHP backend.</div>
+        </div>
+        
+        <div class="demo-search">
+            <h3>📊 نتائج البحث النموذجية - Sample Search Results</h3>
+            
+            <div class="result-item">
+                <div class="product-name">فستان نسائي متوسط الطول كاجوال مطرز بدون أكمام وياقة مربعة</div>
+                <div class="product-details">
+                    العلامة التجارية: بيج دارت | الفئة: فساتين | اللون: أسود
+                    <br>
+                    السعر: <span class="price">52.04 ريال</span> | 
+                    <span class="score">النتيجة: 95%</span>
+                </div>
+            </div>
+            
+            <div class="result-item">
+                <div class="product-name">قميص مخطط اوفرسايز بأكمام طويلة</div>
+                <div class="product-details">
+                    العلامة التجارية: بيج دارت | الفئة: قمصان | اللون: أسود
+                    <br>
+                    السعر: <span class="price">49.28 ريال</span> | 
+                    <span class="score">النتيجة: 87%</span>
+                </div>
+            </div>
+            
+            <div class="result-item">
+                <div class="product-name">جاكيت نسائي بياقة قميص وأكمام طويلة وأزرار أمامية</div>
+                <div class="product-details">
+                    العلامة التجارية: بيج دارت | الفئة: جاكيتات | اللون: أزرق
+                    <br>
+                    السعر: <span class="price">83.81 ريال</span> | 
+                    <span class="score">النتيجة: 82%</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-search">
+            <h3>🎯 الميزات المتقدمة - Advanced Features</h3>
+            <ul class="features">
+                <li>البحث الضبابي - يتعامل مع الأخطاء الإملائية (فسسان → فستان)</li>
+                <li>تطبيع النص العربي - إزالة التشكيل وتوحيد الأحرف</li>
+                <li>نظام النقاط الذكي - ترتيب النتائج حسب الصلة</li>
+                <li>اقتراحات ذكية - "هل تقصد؟" للكلمات المشابهة</li>
+                <li>دعم RTL كامل - واجهة مصممة للعربية</li>
+                <li>البحث السريع - نتائج في أقل من ثانية</li>
+                <li>ذاكرة التخزين المؤقت - أداء محسن للبحث المتكرر</li>
+                <li>واجهة متجاوبة - تعمل على جميع الأجهزة</li>
+            </ul>
+        </div>
+        
+        <div class="demo-search">
+            <h3>🧪 أمثلة للاختبار - Test Examples</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                <div>
+                    <strong>البحث الدقيق:</strong><br>
+                    فستان، قميص، جاكيت
+                </div>
+                <div>
+                    <strong>البحث مع أخطاء:</strong><br>
+                    فسسان، قمسص، جاكت
+                </div>
+                <div>
+                    <strong>البحث الجزئي:</strong><br>
+                    فس، قم، جا
+                </div>
+                <div>
+                    <strong>البحث بالعلامة:</strong><br>
+                    بيج دارت
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; padding: 20px; background: #e3f2fd; border-radius: 8px;">
+            <p><strong>نظام البحث جاهز للاستخدام!</strong></p>
+            <p>يمكنك الوصول إلى النظام الكامل عبر <code>index.php</code> مع خادم PHP</p>
+            <p style="font-size: 14px; color: #666;">
+                Built with PHP, JavaScript, Tailwind CSS | 10,000+ Products | RTL Support
+            </p>
+        </div>
+    </div>
+</body>
+</html>
